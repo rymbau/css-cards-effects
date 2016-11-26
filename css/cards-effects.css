@@ -84,6 +84,9 @@
 }
 
 /***********************************/
+.door-effect {
+    perspective: 1200px;
+}
 
 .door-effect img {
     position: absolute;
