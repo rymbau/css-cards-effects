@@ -16,15 +16,15 @@
 }
 
 .fade-effect-section {
-    background-color: #df0024;
+    background-color: #ffd9d9;
 }
 
 .flip-effect-section {
-    background-color: #fcb040;
+    background-color: #88b889;
 }
 
 .door-effect-section {
-    background-color: #a4d0d1;
+    background-color: #faf7bb;
 }
 
 .card {
@@ -38,6 +38,7 @@
 
 .fade-effect img {
     position: absolute;
+    border: solid 1px white;
     transition: opacity 1s ease-in-out;
 }
 
@@ -61,8 +62,9 @@
 
 .flip-effect img {
     position: absolute;
+    border: solid 1px white;
     backface-visibility: hidden;
-    transition: transform 0.6s;
+    transition: transform 1s;
 }
 
 .flip-effect img.front {
@@ -85,7 +87,8 @@
 
 .door-effect img {
     position: absolute;
-    transition: transform 0.6s;
+    border: solid 1px white;
+    transition: transform 1s;
     transform-style: preserve-3d;
     transform-origin: 0 50%;
 }
