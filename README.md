@@ -1,15 +1,20 @@
 # css-card-effects
 
-CSS cards transitions, transforms and animations
+CSS useful cards effects: transitions, transforms and animations
 
 ## Demo
 
+http://projects.glicer.com/css-cards-effects/
 
 ## Usage
 
+img directory contains images to display.
 
-### Configuration
+Useful effects on hover card :
 
+* fade effect
+* flip effect
+* door effect
 
 ## License 
 
