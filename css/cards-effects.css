@@ -1,3 +1,13 @@
+body{
+    margin: 0px;
+}
+
+.container {
+    margin: 15px;
+}
+
+/***********************************/
+
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -12,7 +22,7 @@
 
 .section {
     position: relative;
-    padding: 60px;
+    padding: 80px;
 }
 
 .fade-effect-section {
@@ -34,11 +44,16 @@
     margin: 0 auto;
 }
 
+.card img {
+    border: solid 15px white;
+    top: -15px;
+    left: -15px;
+}
+
 /***********************************/
 
 .fade-effect img {
     position: absolute;
-    border: solid 1px white;
     transition: opacity 1s ease-in-out;
 }
 
@@ -62,7 +77,6 @@
 
 .flip-effect img {
     position: absolute;
-    border: solid 1px white;
     backface-visibility: hidden;
     transition: transform 1s;
 }
@@ -91,7 +105,6 @@
 
 .door-effect img {
     position: absolute;
-    border: solid 1px white;
     transition: transform 1s;
     transform-style: preserve-3d;
     transform-origin: 0 50%;
@@ -112,7 +125,7 @@ footer {
     font-family: "Verdana", Arial, serif;
     font-size: 0.9em;
     text-align: center;
-    padding: 30px 5px 20px 5px;
+    padding: 30px 5px 30px 5px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -120,12 +133,22 @@ footer {
 /***********************************/
 
 @media screen and (max-width: 767px) {
+    .container {
+        margin: 10px;
+    }
+    
     .card {
         width: 212px;
         height: 212px;
     }
 
+    .card img {
+        border: solid 10px white;
+        top: -10px;
+        left: -10px;
+    }
+
     .section {
-        padding: 20px;
+        padding: 30px 20px 30px 20px;
     }
 }
