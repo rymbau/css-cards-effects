@@ -1,5 +1,5 @@
-body{
-    margin: 0px;
+body {
+    margin: 0;
 }
 
 .container {
@@ -54,6 +54,7 @@ body{
 
 .fade-effect img {
     position: absolute;
+    -webkit-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
 
@@ -77,45 +78,64 @@ body{
 
 .flip-effect img {
     position: absolute;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transition: transform 1s;
     transition: transform 1s;
 }
 
 .flip-effect img.front {
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
 .flip-effect:hover img.front {
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .flip-effect img.back {
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .flip-effect:hover img.back {
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
 /***********************************/
 
 .door-effect {
+    -webkit-perspective: 1200px;
     perspective: 1200px;
 }
 
 .door-effect img {
     position: absolute;
+    -ms-transform-origin: 0 50%;
+    -webkit-transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 0 50%;
     transition: transform 1s;
     transform-style: preserve-3d;
     transform-origin: 0 50%;
 }
 
 .door-effect img.front {
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     z-index: 999 !important;
 }
 
 .door-effect:hover img.front {
+    -ms-transform: rotateY(-115deg);
+    -webkit-transform: rotateY(-115deg);
     transform: rotateY(-115deg);
 }
 
@@ -136,7 +156,7 @@ footer {
     .container {
         margin: 10px;
     }
-    
+
     .card {
         width: 212px;
         height: 212px;
