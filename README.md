@@ -1,4 +1,4 @@
-# css-card-effects
+# css-cards-effects
 
 CSS useful cards effects: transitions, transforms and animations
 

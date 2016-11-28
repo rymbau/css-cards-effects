@@ -58,19 +58,21 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
-.fade-effect img.front:hover {
-    opacity: 0;
-}
-
 .fade-effect img.front {
     opacity: 1;
+}
+
+.fade-effect.active img.front,
+.no-touch .fade-effect:hover img.front {
+    opacity: 0;
 }
 
 .fade-effect img.back {
     opacity: 0;
 }
 
-.fade-effect img.back:hover {
+.fade-effect.active img.back,
+.no-touch .fade-effect:hover img.back {
     opacity: 1;
 }
 
@@ -90,7 +92,8 @@ body {
     transform: rotateY(0deg);
 }
 
-.flip-effect:hover img.front {
+.flip-effect.active img.front,
+.no-touch .flip-effect:hover img.front {
     -ms-transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
@@ -102,7 +105,8 @@ body {
     transform: rotateY(-180deg);
 }
 
-.flip-effect:hover img.back {
+.flip-effect.active img.back,
+.no-touch .flip-effect:hover img.back {
     -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
@@ -133,7 +137,8 @@ body {
     z-index: 999 !important;
 }
 
-.door-effect:hover img.front {
+.door-effect.active img.front,
+.no-touch .door-effect:hover img.front {
     -ms-transform: rotateY(-115deg);
     -webkit-transform: rotateY(-115deg);
     transform: rotateY(-115deg);

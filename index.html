@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/cards-effects.css">
 </head>
-<body>
+<body class="no-touch">
 <div class="container">
     <div class="fade-effect-section section">
         <div class="fade-effect card">
@@ -38,6 +38,20 @@
 <footer>
     <span>Dev & Rock 'n' roll © 2016 Glicer</span>
 </footer>
+
+<script type="text/javascript">
+    if (("ontouchstart" in document.documentElement)) {
+        document.body.classList.remove("no-touch");
+        var cards = document.getElementsByClassName("card");
+        for (var i = 0; i < cards.length; i++) {
+            var card = cards[i];
+            card.addEventListener("click", function (e) {
+                this.classList.toggle("active");
+                e.preventDefault();
+            });
+        }
+    }
+</script>
 
 </body>
 </html>
