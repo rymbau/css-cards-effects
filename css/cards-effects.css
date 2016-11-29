@@ -197,7 +197,7 @@ img.solid-border {
 
 .shake-effect.active img.front,
 .no-touch .shake-effect:hover img.front {
-    -webkit-animation: shake 1s ease infinite;
+    -webkit-animation: shake 0.5s ease infinite;
     animation: shake 0.5s ease infinite;
 }
 
