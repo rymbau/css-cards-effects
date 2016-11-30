@@ -17,6 +17,7 @@ Useful effects on hover card :
 * door effect
 * pulse effect
 * shake effect
+* rotate effect
 
 ## License 
 

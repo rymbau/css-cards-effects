@@ -259,6 +259,40 @@ img.solid-border {
 
 /***********************************/
 
+.rotate-effect img {
+    position: absolute;
+    -webkit-transition: transform 2s;
+    transition: transform 2s;
+}
+
+.rotate-effect.active img.front,
+.no-touch .rotate-effect:hover img.front {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/***********************************/
+
 footer {
     font-family: "Verdana", Arial, serif;
     font-size: 0.9em;
