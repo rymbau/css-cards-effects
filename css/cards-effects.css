@@ -89,32 +89,28 @@ img.solid-border {
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: transform 1s;
+    -webkit-transition: -webkit-transform 1s;
     transition: transform 1s;
 }
 
 .flip-effect img.front {
-    -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
 .flip-effect.active img.front,
 .no-touch .flip-effect:hover img.front {
-    -ms-transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .flip-effect img.back {
-    -ms-transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .flip-effect.active img.back,
 .no-touch .flip-effect:hover img.back {
-    -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
@@ -128,8 +124,7 @@ img.solid-border {
 
 .door-effect img {
     position: absolute;
-    -ms-transform-origin: 0 50%;
-    -webkit-transition: transform 1s;
+    -webkit-transition: -webkit-transform 1s;
     -webkit-transform-style: preserve-3d;
     -webkit-transform-origin: 0 50%;
     transition: transform 1s;
@@ -138,7 +133,6 @@ img.solid-border {
 }
 
 .door-effect img.front {
-    -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     z-index: 999 !important;
@@ -146,7 +140,6 @@ img.solid-border {
 
 .door-effect.active img.front,
 .no-touch .door-effect:hover img.front {
-    -ms-transform: rotateY(-115deg);
     -webkit-transform: rotateY(-115deg);
     transform: rotateY(-115deg);
 }
@@ -154,7 +147,7 @@ img.solid-border {
 /***********************************/
 
 .pulse-effect img {
-    -webkit-transition: transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
 }
 
@@ -195,7 +188,7 @@ img.solid-border {
 /***********************************/
 
 .shake-effect img {
-    -webkit-transition: transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
 }
 
@@ -261,14 +254,20 @@ img.solid-border {
 
 .rotate-effect img {
     position: absolute;
-    -webkit-transition: transform 2s;
-    transition: transform 2s;
 }
 
-.rotate-effect.active img.front,
-.no-touch .rotate-effect:hover img.front {
+.rotate-effect img.front {
     -webkit-animation: rotate 2s linear infinite;
     animation: rotate 2s linear infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+
+}
+
+.rotate-effect.active img.front, 
+.no-touch .rotate-effect:hover img.front {;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
 }
 
 @-webkit-keyframes rotate {
