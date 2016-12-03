@@ -34,19 +34,19 @@ img.solid-border {
     padding: 80px;
 }
 
-.color1 {
+.color-blue1 {
     background-color: #cadae6;
 }
 
-.color2 {
+.color-pink1 {
     background-color: #ffd6d6;
 }
 
-.color3 {
+.color-green1 {
     background-color: #81b883;
 }
 
-.color4 {
+.color-yellow1 {
     background-color: #faf7af;
 }
 
@@ -261,10 +261,9 @@ img.solid-border {
     animation: rotate 2s linear infinite;
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
-
 }
 
-.rotate-effect.active img.front, 
+.rotate-effect.active img.front,
 .no-touch .rotate-effect:hover img.front {;
     -webkit-animation-play-state: running;
     animation-play-state: running;
@@ -287,6 +286,80 @@ img.solid-border {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+/***********************************/
+
+.pendulum-effect img {
+    position: absolute;
+}
+
+.pendulum-effect img.front {
+    -webkit-animation: pendulum 3s infinite;
+    animation: pendulum 3s infinite;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+
+}
+
+.pendulum-effect.active img.front,
+.no-touch .pendulum-effect:hover img.front {
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+@-webkit-keyframes pendulum {
+    from {
+        -webkit-transform: rotate(0deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    25% {
+        -webkit-transform: rotate(30deg);
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    50% {
+        -webkit-transform: rotate(0deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    75% {
+        -webkit-transform: rotate(-30deg);
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes pendulum {
+    from {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+    
+    25% {
+        transform: rotate(30deg);
+        animation-timing-function: ease-in;
+    }
+    
+    50% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+    
+    75% {
+        transform: rotate(-30deg);
+        animation-timing-function: ease-in;
+    }
+    
+    to {
+        transform: rotate(0deg);
     }
 }
 
