@@ -18,7 +18,7 @@ Useful effects on hover card :
 * pulse effect
 * shake effect
 * rotate effect
-* pendulum effect
+* translate effect
 
 ## License 
 

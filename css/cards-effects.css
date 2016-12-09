@@ -291,76 +291,21 @@ img.solid-border {
 
 /***********************************/
 
-.pendulum-effect img {
+.translate-effect img {
     position: absolute;
 }
 
-.pendulum-effect img.front {
-    -webkit-animation: pendulum 3s infinite;
-    animation: pendulum 3s infinite;
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-
+.translate-effect img.back {
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
-.pendulum-effect.active img.front,
-.no-touch .pendulum-effect:hover img.front {
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
-}
-
-@-webkit-keyframes pendulum {
-    from {
-        -webkit-transform: rotate(0deg);
-        -webkit-animation-timing-function: ease-out;
-    }
-
-    25% {
-        -webkit-transform: rotate(30deg);
-        -webkit-animation-timing-function: ease-in;
-    }
-
-    50% {
-        -webkit-transform: rotate(0deg);
-        -webkit-animation-timing-function: ease-out;
-    }
-
-    75% {
-        -webkit-transform: rotate(-30deg);
-        -webkit-animation-timing-function: ease-in;
-    }
-
-    to {
-        -webkit-transform: rotate(0deg);
-    }
-}
-
-@keyframes pendulum {
-    from {
-        transform: rotate(0deg);
-        animation-timing-function: ease-out;
-    }
-    
-    25% {
-        transform: rotate(30deg);
-        animation-timing-function: ease-in;
-    }
-    
-    50% {
-        transform: rotate(0deg);
-        animation-timing-function: ease-out;
-    }
-    
-    75% {
-        transform: rotate(-30deg);
-        animation-timing-function: ease-in;
-    }
-    
-    to {
-        transform: rotate(0deg);
-    }
+.translate-effect.active img.back,
+.no-touch .translate-effect:hover img.back {
+    -webkit-transition: -webkit-transform 1s ease-out;
+    transition: transform 1s ease-out;
+    -webkit-transform: translateY(-140px);
+    transform: translateY(-140px);
 }
 
 /***********************************/
