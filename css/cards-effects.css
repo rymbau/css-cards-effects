@@ -311,7 +311,7 @@ img.solid-border {
 /***********************************/
 
 footer {
-    font-family: "Verdana", Arial, serif;
+    font-family: Consolas, Verdana, Arial, sans-serif;
     font-size: 0.9em;
     text-align: center;
     padding: 30px 5px 30px 5px;
